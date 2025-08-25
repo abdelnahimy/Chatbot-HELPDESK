@@ -1,0 +1,1510 @@
+[
+  {
+    "input": "Créer un ticket pour un problème réseau",
+    "output": "Je vais créer votre ticket. Quel est le niveau de priorité ?"
+  },
+  {
+    "input": "J'ai un problème avec mon PC",
+    "output": "Création du ticket en cours. Pouvez-vous décrire le problème ?"
+  },
+  {
+    "input": "Je veux signaler un bug",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "Nouveau ticket pour panne de VPN",
+    "output": "D'accord, je crée un ticket pour vous."
+  },
+  {
+    "input": "Signaler une erreur dans l'application",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Ouvrir un ticket pour problème de connexion",
+    "output": "D'accord, je crée un ticket pour vous."
+  },
+  {
+    "input": "Problème de mot de passe oublié",
+    "output": "Je m'occupe de votre ticket. Dans quelle catégorie classeriez-vous ce problème ?"
+  },
+  {
+    "input": "Je veux déclarer un incident",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Comment créer un nouveau ticket ?",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Je rencontre un souci technique",
+    "output": "D'accord, je crée un ticket pour vous."
+  },
+  {
+    "input": "Mon ordinateur ne fonctionne plus",
+    "output": "Parfait, je prépare votre demande. Quelle est la nature exacte du problème ?"
+  },
+  {
+    "input": "L'imprimante ne marche pas",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "Problème avec Teams",
+    "output": "Je vais créer votre ticket. Quel est le niveau de priorité ?"
+  },
+  {
+    "input": "Mon email ne fonctionne plus",
+    "output": "Création du ticket en cours. Pouvez-vous décrire le problème ?"
+  },
+  {
+    "input": "Je n'arrive pas à me connecter à Outlook",
+    "output": "Je m'occupe de votre ticket. Dans quelle catégorie classeriez-vous ce problème ?"
+  },
+  {
+    "input": "Créer une demande d'assistance",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "Signaler une panne système",
+    "output": "D'accord, je crée un ticket pour vous."
+  },
+  {
+    "input": "Nouveau ticket pour dysfonctionnement",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "J'ai besoin d'aide technique",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Déclaration d'incident informatique",
+    "output": "Je vais créer votre ticket. Quel est le niveau de priorité ?"
+  },
+  {
+    "input": "Problème d'accès aux applications",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "Créer un ticket urgent",
+    "output": "Je vais créer votre ticket. Quel est le niveau de priorité ?"
+  },
+  {
+    "input": "Signaler un bug critique",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Mon logiciel crash constamment",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Problème de performance réseau",
+    "output": "Ticket en cours de création. Avez-vous des captures d'écran à joindre ?"
+  },
+  {
+    "input": "Créer une demande de support",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "Je veux ouvrir un incident",
+    "output": "Création du ticket en cours. Pouvez-vous décrire le problème ?"
+  },
+  {
+    "input": "Nouveau ticket de maintenance",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "Problème avec la base de données",
+    "output": "Ticket en cours de création. Avez-vous des captures d'écran à joindre ?"
+  },
+  {
+    "input": "Signaler une faille de sécurité",
+    "output": "Je m'occupe de votre ticket. Dans quelle catégorie classeriez-vous ce problème ?"
+  },
+  {
+    "input": "Besoin d'ouvrir un ticket pour mon écran noir",
+    "output": "Je m'occupe de votre ticket. Dans quelle catégorie classeriez-vous ce problème ?"
+  },
+  {
+    "input": "Mon VPN déconne complètement",
+    "output": "Je m'occupe de votre ticket. Dans quelle catégorie classeriez-vous ce problème ?"
+  },
+  {
+    "input": "Comment déclarer un nouveau problème technique ?",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Démarrage impossible de l'ordi, créer ticket",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "Ticket pour problème Outlook urgent",
+    "output": "Merci de préciser le problème afin que je crée le ticket."
+  },
+  {
+    "input": "Soumission bug dans l'appli mobile",
+    "output": "Je m'occupe de votre ticket. Dans quelle catégorie classeriez-vous ce problème ?"
+  },
+  {
+    "input": "Impossible d'accéder au drive, besoin ticket",
+    "output": "D'accord, je crée un ticket pour vous."
+  },
+  {
+    "input": "Problème d'impression en réseau",
+    "output": "Je vais créer votre ticket. Quel est le niveau de priorité ?"
+  },
+  {
+    "input": "Créer un tiket pour accès refusé",
+    "output": "Je m'occupe de votre ticket. Dans quelle catégorie classeriez-vous ce problème ?"
+  },
+  {
+    "input": "Signalement panne serveur",
+    "output": "Je m'occupe de votre ticket. Dans quelle catégorie classeriez-vous ce problème ?"
+  },
+  {
+    "input": "Nouveau incident : écran bleu Windows",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Ouvrir un dossier pour matériel défectueux",
+    "output": "Pouvez-vous me donner plus de détails pour le ticket ?"
+  },
+  {
+    "input": "Où en est le ticket HELP-123",
+    "output": "Je vérifie l'état du ticket."
+  },
+  {
+    "input": "Donne-moi l'état du ticket 456",
+    "output": "Je récupère les informations de statut."
+  },
+  {
+    "input": "Statut du ticket",
+    "output": "Un moment, je consulte votre ticket."
+  },
+  {
+    "input": "Est-ce que mon ticket est résolu ?",
+    "output": "Vérification du statut dans Jira..."
+  },
+  {
+    "input": "Quel est l'avancement de HELP-789",
+    "output": "Je regarde où en est votre demande."
+  },
+  {
+    "input": "Peux-tu vérifier l'état de mon ticket ?",
+    "output": "Je regarde où en est votre demande."
+  },
+  {
+    "input": "Le ticket 123 est-il toujours ouvert ?",
+    "output": "Je récupère les informations de statut."
+  },
+  {
+    "input": "Je veux connaître le statut du ticket",
+    "output": "Consultation du statut en cours..."
+  },
+  {
+    "input": "As-tu des nouvelles du ticket HELP-555 ?",
+    "output": "Consultation du statut en cours..."
+  },
+  {
+    "input": "Quelle est la progression du ticket INC-001 ?",
+    "output": "Consultation du statut en cours..."
+  },
+  {
+    "input": "Mon ticket HELP-999 a-t-il été traité ?",
+    "output": "Je récupère les informations de statut."
+  },
+  {
+    "input": "Vérifier le statut de ma demande",
+    "output": "Vérification du statut dans Jira..."
+  },
+  {
+    "input": "Où en est ma demande d'assistance ?",
+    "output": "Je vérifie l'avancement avec l'équipe technique."
+  },
+  {
+    "input": "Le ticket SR-123 est-il en cours ?",
+    "output": "Je vérifie l'avancement avec l'équipe technique."
+  },
+  {
+    "input": "Statut actuel du ticket de maintenance",
+    "output": "Je vérifie l'état du ticket."
+  },
+  {
+    "input": "A-t-on avancé sur mon incident ?",
+    "output": "Je vérifie l'avancement avec l'équipe technique."
+  },
+  {
+    "input": "Mon problème a-t-il été pris en compte ?",
+    "output": "Un instant, je consulte Jira pour vous."
+  },
+  {
+    "input": "Suivi du ticket PROB-456",
+    "output": "Je vérifie l'avancement avec l'équipe technique."
+  },
+  {
+    "input": "État d'avancement de ma demande",
+    "output": "Vérification du statut dans Jira..."
+  },
+  {
+    "input": "Le technicien a-t-il regardé mon ticket ?",
+    "output": "Je regarde où en est votre demande."
+  },
+  {
+    "input": "Nouvelles de mon incident informatique",
+    "output": "Consultation du statut en cours..."
+  },
+  {
+    "input": "Ticket INC-789 toujours en cours ?",
+    "output": "Je vérifie l'avancement avec l'équipe technique."
+  },
+  {
+    "input": "HELP-555 a été traité ou pas ?",
+    "output": "Consultation du statut en cours..."
+  },
+  {
+    "input": "C'est quoi le statut de SR-404 ?",
+    "output": "Un moment, je consulte votre ticket."
+  },
+  {
+    "input": "Update sur mon ticket urgent",
+    "output": "Je vérifie l'avancement avec l'équipe technique."
+  },
+  {
+    "input": "Avancement du dossier TECH-001",
+    "output": "Je vérifie l'état du ticket."
+  },
+  {
+    "input": "Mon incident est résolu ?",
+    "output": "Vérification du statut dans Jira..."
+  },
+  {
+    "input": "Où en est ma réclamation ?",
+    "output": "Je vérifie l'avancement avec l'équipe technique."
+  },
+  {
+    "input": "Statut actuel de la demande 789",
+    "output": "Je vérifie l'avancement avec l'équipe technique."
+  },
+  {
+    "input": "Le ticket est-il toujours en attente ?",
+    "output": "Consultation du statut en cours..."
+  },
+  {
+    "input": "Y a-t-il du nouveau sur mon dossier ?",
+    "output": "Consultation du statut en cours..."
+  },
+  {
+    "input": "Pouvez-vous me dire où ça en est ?",
+    "output": "Vérification du statut dans Jira..."
+  },
+  {
+    "input": "Suivi de la résolution du problème",
+    "output": "Je regarde où en est votre demande."
+  },
+  {
+    "input": "Montre-moi tous mes tickets ouverts",
+    "output": "Voici un récapitulatif de vos demandes ouvertes."
+  },
+  {
+    "input": "Quels sont mes tickets en cours ?",
+    "output": "Voici la liste de vos tickets ouverts."
+  },
+  {
+    "input": "Liste des tickets actifs",
+    "output": "Récapitulatif de vos incidents non résolus."
+  },
+  {
+    "input": "Tickets ouverts",
+    "output": "Voici la liste de vos tickets ouverts."
+  },
+  {
+    "input": "Voir les tickets non résolus",
+    "output": "Liste de vos tickets actifs récupérée."
+  },
+  {
+    "input": "Quels tickets sont encore en attente ?",
+    "output": "Liste de vos tickets actifs récupérée."
+  },
+  {
+    "input": "Je veux voir mes tickets en cours",
+    "output": "Voici vos tickets en cours de traitement."
+  },
+  {
+    "input": "Quels sont les tickets ouverts sur mon compte ?",
+    "output": "Je vous affiche les tickets actifs."
+  },
+  {
+    "input": "Afficher mes demandes actives",
+    "output": "Voici la liste de vos tickets ouverts."
+  },
+  {
+    "input": "Liste de mes incidents en cours",
+    "output": "Voici le statut de tous vos tickets ouverts."
+  },
+  {
+    "input": "Voir toutes mes demandes ouvertes",
+    "output": "Voici le statut de tous vos tickets ouverts."
+  },
+  {
+    "input": "Quels sont mes tickets non fermés ?",
+    "output": "Récapitulatif de vos incidents non résolus."
+  },
+  {
+    "input": "Mes demandes d'assistance en attente",
+    "output": "Liste de vos tickets actifs récupérée."
+  },
+  {
+    "input": "Tickets en cours de traitement",
+    "output": "Affichage de vos demandes en cours..."
+  },
+  {
+    "input": "Afficher le backlog de mes demandes",
+    "output": "Voici la liste de vos tickets ouverts."
+  },
+  {
+    "input": "Mes incidents non résolus",
+    "output": "Récapitulatif de vos incidents non résolus."
+  },
+  {
+    "input": "Liste des tickets assignés à mon nom",
+    "output": "Voici un récapitulatif de vos demandes ouvertes."
+  },
+  {
+    "input": "Voir mes demandes de support actives",
+    "output": "Récapitulatif de vos incidents non résolus."
+  },
+  {
+    "input": "Lister mes demandes non clôturées",
+    "output": "Voici un récapitulatif de vos demandes ouvertes."
+  },
+  {
+    "input": "Affiche les tickets en attente",
+    "output": "Liste de vos tickets actifs récupérée."
+  },
+  {
+    "input": "Backlog de mes incidents",
+    "output": "Affichage de vos demandes en cours..."
+  },
+  {
+    "input": "Tickets assignés à moi encore actifs",
+    "output": "Récapitulatif de vos incidents non résolus."
+  },
+  {
+    "input": "Voir toutes mes requêtes en suspens",
+    "output": "Voici le statut de tous vos tickets ouverts."
+  },
+  {
+    "input": "Montre-moi ce qui est encore ouvert",
+    "output": "Liste de vos tickets actifs récupérée."
+  },
+  {
+    "input": "Quels problèmes sont toujours actifs ?",
+    "output": "Liste de vos tickets actifs récupérée."
+  },
+  {
+    "input": "Liste des dossiers non résolus",
+    "output": "Voici le statut de tous vos tickets ouverts."
+  },
+  {
+    "input": "Afficher mes tickets en cours uniquement",
+    "output": "Je vous affiche les tickets actifs."
+  },
+  {
+    "input": "Donne-moi la liste des ouverts",
+    "output": "Voici la liste de vos tickets ouverts."
+  },
+  {
+    "input": "Tickets non clos dans mon espace",
+    "output": "Récapitulatif de vos incidents non résolus."
+  },
+  {
+    "input": "Incidents toujours en investigation",
+    "output": "Je vous affiche les tickets actifs."
+  },
+  {
+    "input": "Mettre à jour le ticket HELP-123",
+    "output": "Mise à jour effectuée avec succès."
+  },
+  {
+    "input": "Changer la description du ticket 456",
+    "output": "Les nouvelles informations ont été ajoutées."
+  },
+  {
+    "input": "Modifier le ticket 789",
+    "output": "Le ticket a été mis à jour selon vos indications."
+  },
+  {
+    "input": "Ajouter une note au ticket HELP-999",
+    "output": "Les nouvelles informations ont été ajoutées."
+  },
+  {
+    "input": "Mise à jour du ticket existant",
+    "output": "Mise à jour effectuée avec succès."
+  },
+  {
+    "input": "Je veux ajouter un commentaire à un ticket",
+    "output": "Votre modification a été enregistrée."
+  },
+  {
+    "input": "Modifier les détails du ticket",
+    "output": "Je prends en compte votre changement."
+  },
+  {
+    "input": "Ajouter des informations au ticket INC-001",
+    "output": "Le ticket a été mis à jour selon vos indications."
+  },
+  {
+    "input": "Complément d'information pour le ticket",
+    "output": "Le ticket a été mis à jour selon vos indications."
+  },
+  {
+    "input": "Réviser la description du problème",
+    "output": "Modification appliquée au ticket."
+  },
+  {
+    "input": "Mise à jour de la priorité du ticket",
+    "output": "Les nouvelles informations ont été ajoutées."
+  },
+  {
+    "input": "Changer la catégorie du ticket SR-456",
+    "output": "Modification du ticket en cours."
+  },
+  {
+    "input": "Ajouter un fichier au ticket",
+    "output": "Le ticket a été mis à jour selon vos indications."
+  },
+  {
+    "input": "Modifier l'urgence du ticket",
+    "output": "Modification du ticket en cours."
+  },
+  {
+    "input": "Compléter le ticket avec de nouveaux éléments",
+    "output": "Mise à jour effectuée avec succès."
+  },
+  {
+    "input": "Révision des détails techniques",
+    "output": "Le ticket a été mis à jour selon vos indications."
+  },
+  {
+    "input": "Ajouter une capture d'écran au ticket",
+    "output": "Votre modification a été enregistrée."
+  },
+  {
+    "input": "Modifier la gravité du ticket HELP-777",
+    "output": "Votre modification a été enregistrée."
+  },
+  {
+    "input": "Joindre un log au ticket 888",
+    "output": "Modification du ticket en cours."
+  },
+  {
+    "input": "Compléter le ticket avec une erreur 404",
+    "output": "Mise à jour effectuée avec succès."
+  },
+  {
+    "input": "Mettre à jour l'état du ticket",
+    "output": "Je prends en compte votre changement."
+  },
+  {
+    "input": "Ajouter un commentaire au dossier 123",
+    "output": "Le ticket a été mis à jour selon vos indications."
+  },
+  {
+    "input": "Changer le responsable du ticket",
+    "output": "Modification appliquée au ticket."
+  },
+  {
+    "input": "Mise à jour des informations client",
+    "output": "Je prends en compte votre changement."
+  },
+  {
+    "input": "Ajouter des étapes de reproduction",
+    "output": "Modification appliquée au ticket."
+  },
+  {
+    "input": "Modifier la date d'échéance",
+    "output": "Les nouvelles informations ont été ajoutées."
+  },
+  {
+    "input": "Compléter le ticket avec nouveau symptôme",
+    "output": "Modification du ticket en cours."
+  },
+  {
+    "input": "Réassigner en modifiant le ticket",
+    "output": "Les nouvelles informations ont été ajoutées."
+  },
+  {
+    "input": "Changer le niveau de priorité",
+    "output": "Je prends en compte votre changement."
+  },
+  {
+    "input": "Ajouter un observateur au ticket",
+    "output": "Modification appliquée au ticket."
+  },
+  {
+    "input": "Fermer le ticket HELP-123",
+    "output": "Le ticket a été fermé."
+  },
+  {
+    "input": "Clôturer le ticket 456",
+    "output": "Ticket clôturé avec succès."
+  },
+  {
+    "input": "Mettre fin au ticket 789",
+    "output": "Fermeture confirmée, le ticket est archivé."
+  },
+  {
+    "input": "Marquer le ticket comme résolu",
+    "output": "Clôture effective, merci de votre retour."
+  },
+  {
+    "input": "Je veux clôturer un ticket",
+    "output": "Clôture effective, merci de votre retour."
+  },
+  {
+    "input": "Terminer un ticket ouvert",
+    "output": "Le ticket est maintenant marqué comme résolu."
+  },
+  {
+    "input": "Résoudre le ticket INC-001",
+    "output": "Le ticket a été marqué comme terminé."
+  },
+  {
+    "input": "Fermeture du ticket de maintenance",
+    "output": "Fermeture confirmée, le ticket est archivé."
+  },
+  {
+    "input": "Le problème est résolu, fermer le ticket",
+    "output": "Clôture effective, merci de votre retour."
+  },
+  {
+    "input": "Clore la demande d'assistance",
+    "output": "Fermeture confirmée, le ticket est archivé."
+  },
+  {
+    "input": "Marquer comme terminé le ticket SR-999",
+    "output": "Résolution enregistrée et ticket fermé."
+  },
+  {
+    "input": "Finaliser la résolution du ticket",
+    "output": "Clôture effective, merci de votre retour."
+  },
+  {
+    "input": "Archiver le ticket résolu",
+    "output": "Ticket clôturé avec succès."
+  },
+  {
+    "input": "Confirmer la fermeture du ticket",
+    "output": "Ticket clôturé avec succès."
+  },
+  {
+    "input": "Clôturer le dossier TECH-123 résolu",
+    "output": "Le ticket a été fermé."
+  },
+  {
+    "input": "Archiver le ticket pour panne résolue",
+    "output": "Ticket clôturé avec succès."
+  },
+  {
+    "input": "Fermer l'incident numéro 456",
+    "output": "Le ticket a été fermé."
+  },
+  {
+    "input": "Le ticket peut être clos maintenant",
+    "output": "Clôture du ticket effectuée."
+  },
+  {
+    "input": "Marquer comme résolu le bug 789",
+    "output": "Ticket clôturé avec succès."
+  },
+  {
+    "input": "Fermeture du dossier suite à correction",
+    "output": "Clôture effective, merci de votre retour."
+  },
+  {
+    "input": "Clôturer cette demande",
+    "output": "Ticket clôturé avec succès."
+  },
+  {
+    "input": "Terminer le ticket après résolution",
+    "output": "Ticket clôturé avec succès."
+  },
+  {
+    "input": "Fermer le ticket car problème réglé",
+    "output": "Le ticket a été fermé."
+  },
+  {
+    "input": "Archiver la demande d'assistance",
+    "output": "Le ticket a été fermé."
+  },
+  {
+    "input": "Mettre fin à l'incident 001",
+    "output": "Ticket clôturé avec succès."
+  },
+  {
+    "input": "Clore définitivement le ticket",
+    "output": "Résolution enregistrée et ticket fermé."
+  },
+  {
+    "input": "Assigner le ticket HELP-123 à Jean",
+    "output": "Le ticket a été assigné à l'agent indiqué."
+  },
+  {
+    "input": "Attribuer le ticket 456 à Paul",
+    "output": "Nouvelle affectation enregistrée."
+  },
+  {
+    "input": "Changer l'agent du ticket 789",
+    "output": "L'équipe compétente a reçu le ticket."
+  },
+  {
+    "input": "Donner le ticket à Marie",
+    "output": "Le ticket a été délégué avec succès."
+  },
+  {
+    "input": "Je veux assigner un ticket",
+    "output": "Réassignation confirmée."
+  },
+  {
+    "input": "Assigner un ticket à un agent",
+    "output": "L'agent a bien reçu le ticket."
+  },
+  {
+    "input": "Réassigner le ticket à Sophie",
+    "output": "Le ticket a été délégué avec succès."
+  },
+  {
+    "input": "Transférer le ticket à l'équipe réseau",
+    "output": "L'équipe compétente a reçu le ticket."
+  },
+  {
+    "input": "Changer le responsable du ticket INC-001",
+    "output": "Le ticket a été assigné à l'agent indiqué."
+  },
+  {
+    "input": "Attribuer à un spécialiste",
+    "output": "Assignation effectuée avec succès."
+  },
+  {
+    "input": "Escalader le ticket vers le niveau 2",
+    "output": "Réassignation confirmée."
+  },
+  {
+    "input": "Affecter le ticket au bon service",
+    "output": "Transfert vers l'agent spécialisé réalisé."
+  },
+  {
+    "input": "Déléguer le ticket à un expert",
+    "output": "Assignation effectuée avec succès."
+  },
+  {
+    "input": "Assigner ce dossier à l'équipe SAP",
+    "output": "Le ticket a été délégué avec succès."
+  },
+  {
+    "input": "Donner le ticket à David pour expertise",
+    "output": "Assignation effectuée avec succès."
+  },
+  {
+    "input": "Transférer à l'équipe sécurité",
+    "output": "Le ticket a été délégué avec succès."
+  },
+  {
+    "input": "Attribuer ce problème à un technicien",
+    "output": "Le ticket a été délégué avec succès."
+  },
+  {
+    "input": "Changer l'assignation vers Marc",
+    "output": "Assignation effectuée avec succès."
+  },
+  {
+    "input": "Réassigner à l'équipe infrastructure",
+    "output": "L'agent a bien reçu le ticket."
+  },
+  {
+    "input": "Déléguer ce ticket au support N2",
+    "output": "Transfert vers l'agent spécialisé réalisé."
+  },
+  {
+    "input": "Cherche un ticket avec le mot 'VPN'",
+    "output": "Voici les tickets contenant ce terme."
+  },
+  {
+    "input": "Trouver un ticket concernant l'impression",
+    "output": "Voici les tickets contenant ce terme."
+  },
+  {
+    "input": "Recherche de ticket avec le mot 'bug'",
+    "output": "Voici les tickets correspondant à votre recherche."
+  },
+  {
+    "input": "Montre-moi les tickets contenant 'connexion'",
+    "output": "Filtrage effectué selon vos critères."
+  },
+  {
+    "input": "Je veux chercher un ticket par mot-clé",
+    "output": "Filtrage effectué selon vos critères."
+  },
+  {
+    "input": "Recherche tickets par mot-clé",
+    "output": "Correspondances trouvées dans la base."
+  },
+  {
+    "input": "Filtrer les tickets par 'Outlook'",
+    "output": "Voici la liste filtrée des tickets."
+  },
+  {
+    "input": "Tickets mentionnant 'réseau'",
+    "output": "Résultats trouvés pour le mot-clé."
+  },
+  {
+    "input": "Rechercher dans les descriptions 'crash'",
+    "output": "Correspondances trouvées dans la base."
+  },
+  {
+    "input": "Trouver les tickets liés à 'Teams'",
+    "output": "Résultats trouvés pour le mot-clé."
+  },
+  {
+    "input": "Chercher par mot-clé 'sécurité'",
+    "output": "Voici les tickets contenant ce terme."
+  },
+  {
+    "input": "Tickets contenant 'performance'",
+    "output": "Résultats de recherche affichés."
+  },
+  {
+    "input": "Recherche avancée par terme",
+    "output": "Résultats de recherche affichés."
+  },
+  {
+    "input": "Filtrer par catégorie 'hardware'",
+    "output": "Résultats de recherche affichés."
+  },
+  {
+    "input": "Trouver tickets avec 'imprimante'",
+    "output": "Résultats trouvés pour le mot-clé."
+  },
+  {
+    "input": "Rechercher 'accès refusé' dans tickets",
+    "output": "Voici les tickets contenant ce terme."
+  },
+  {
+    "input": "Chercher tous les tickets 'urgence'",
+    "output": "Voici les tickets contenant ce terme."
+  },
+  {
+    "input": "Mots-clés : 'écran noir'",
+    "output": "Résultats trouvés pour le mot-clé."
+  },
+  {
+    "input": "Tickets mentionnant 'mot de passe'",
+    "output": "Résultats trouvés pour le mot-clé."
+  },
+  {
+    "input": "Recherche : 'lenteur système'",
+    "output": "Filtrage effectué selon vos critères."
+  },
+  {
+    "input": "Afficher les tickets urgents",
+    "output": "Voici les tickets prioritaires en cours."
+  },
+  {
+    "input": "Quels sont les tickets haute priorité ?",
+    "output": "Voici les demandes nécessitant une attention immédiate."
+  },
+  {
+    "input": "Liste des tickets critiques",
+    "output": "Liste des tickets urgents affichée."
+  },
+  {
+    "input": "Voir les demandes prioritaires",
+    "output": "Voici les demandes nécessitant une attention immédiate."
+  },
+  {
+    "input": "Tickets avec priorité élevée",
+    "output": "Liste des tickets urgents affichée."
+  },
+  {
+    "input": "Incidents critiques en cours",
+    "output": "Voici les demandes nécessitant une attention immédiate."
+  },
+  {
+    "input": "Quels tickets nécessitent une attention immédiate ?",
+    "output": "Tickets haute priorité récupérés."
+  },
+  {
+    "input": "Afficher le backlog prioritaire",
+    "output": "Liste des tickets urgents affichée."
+  },
+  {
+    "input": "Tickets P1 et P2 ouverts",
+    "output": "Voici les demandes nécessitant une attention immédiate."
+  },
+  {
+    "input": "Tickets bloquants en attente",
+    "output": "Voici les tickets prioritaires en cours."
+  },
+  {
+    "input": "Urgences système à traiter",
+    "output": "Tickets haute priorité récupérés."
+  },
+  {
+    "input": "Incidents majeurs non résolus",
+    "output": "Liste des tickets urgents affichée."
+  },
+  {
+    "input": "Montrez-moi les tickets urgents uniquement",
+    "output": "Voici les tickets prioritaires en cours."
+  },
+  {
+    "input": "Priorité haute et critique",
+    "output": "Tickets haute priorité récupérés."
+  },
+  {
+    "input": "Tickets avec échéance aujourd'hui",
+    "output": "Liste des tickets urgents affichée."
+  },
+  {
+    "input": "Incidents impactant la production",
+    "output": "Voici les tickets prioritaires en cours."
+  },
+  {
+    "input": "Demandes urgentes non traitées",
+    "output": "Voici les demandes nécessitant une attention immédiate."
+  },
+  {
+    "input": "Tickets classés urgence absolue",
+    "output": "Liste des tickets urgents affichée."
+  },
+  {
+    "input": "Problèmes de niveau 1 ouverts",
+    "output": "Voici les demandes nécessitant une attention immédiate."
+  },
+  {
+    "input": "Dossiers avec priorité maximum",
+    "output": "Voici les demandes nécessitant une attention immédiate."
+  },
+  {
+    "input": "Alertes critiques non résolues",
+    "output": "Voici les demandes nécessitant une attention immédiate."
+  },
+  {
+    "input": "Historique du ticket HELP-123",
+    "output": "Voici l'historique complet du ticket."
+  },
+  {
+    "input": "Voir les commentaires du ticket 456",
+    "output": "Historique des interactions disponible."
+  },
+  {
+    "input": "Journal des modifications du ticket",
+    "output": "Chronologie des événements affichée."
+  },
+  {
+    "input": "Chronologie du ticket INC-001",
+    "output": "Chronologie des événements affichée."
+  },
+  {
+    "input": "Afficher l'historique complet",
+    "output": "Journal des modifications récupéré."
+  },
+  {
+    "input": "Voir tous les échanges sur ce ticket",
+    "output": "Historique des interactions disponible."
+  },
+  {
+    "input": "Timeline du ticket de support",
+    "output": "Chronologie des événements affichée."
+  },
+  {
+    "input": "Historique des actions sur INC-123",
+    "output": "Voici l'historique complet du ticket."
+  },
+  {
+    "input": "Audit trail du ticket SEC-456",
+    "output": "Journal des modifications récupéré."
+  },
+  {
+    "input": "Afficher toutes les mises à jour",
+    "output": "Chronologie des événements affichée."
+  },
+  {
+    "input": "Voir le journal d'activité du ticket",
+    "output": "Journal des modifications récupéré."
+  },
+  {
+    "input": "Historique des modifications techniques",
+    "output": "Voici l'historique complet du ticket."
+  },
+  {
+    "input": "Accéder aux anciennes versions",
+    "output": "Chronologie des événements affichée."
+  },
+  {
+    "input": "Chronologie des interventions",
+    "output": "Chronologie des événements affichée."
+  },
+  {
+    "input": "Liste des changements effectués",
+    "output": "Voici l'historique complet du ticket."
+  },
+  {
+    "input": "Historique complet des événements",
+    "output": "Journal des modifications récupéré."
+  },
+  {
+    "input": "Archives des modifications",
+    "output": "Chronologie des événements affichée."
+  },
+  {
+    "input": "Suivi des mises à jour du ticket",
+    "output": "Historique des interactions disponible."
+  },
+  {
+    "input": "Statistiques de mes tickets",
+    "output": "Dashboard personnalisé préparé."
+  },
+  {
+    "input": "Combien de tickets j'ai créés ?",
+    "output": "Voici vos statistiques de tickets."
+  },
+  {
+    "input": "Nombre de tickets résolus ce mois",
+    "output": "Rapport d'activité généré."
+  },
+  {
+    "input": "Temps moyen de résolution",
+    "output": "Métriques de support affichées."
+  },
+  {
+    "input": "Rapport d'activité tickets",
+    "output": "Dashboard personnalisé préparé."
+  },
+  {
+    "input": "Dashboard des demandes",
+    "output": "Rapport d'activité généré."
+  },
+  {
+    "input": "Métriques de support",
+    "output": "Dashboard personnalisé préparé."
+  },
+  {
+    "input": "KPI de mes demandes",
+    "output": "Voici vos statistiques de tickets."
+  },
+  {
+    "input": "Statistiques de résolution",
+    "output": "Rapport d'activité généré."
+  },
+  {
+    "input": "Graphiques de performance",
+    "output": "Rapport d'activité généré."
+  },
+  {
+    "input": "Analyse de mes tickets",
+    "output": "Rapport d'activité généré."
+  },
+  {
+    "input": "Données de productivité",
+    "output": "Dashboard personnalisé préparé."
+  },
+  {
+    "input": "Indicateurs clés de résolution",
+    "output": "Dashboard personnalisé préparé."
+  },
+  {
+    "input": "Rapport mensuel de mes tickets",
+    "output": "Dashboard personnalisé préparé."
+  },
+  {
+    "input": "Escalader le ticket HELP-123",
+    "output": "Le ticket a été remonté hiérarchiquement."
+  },
+  {
+    "input": "Remonter le ticket au niveau supérieur",
+    "output": "Transfert vers l'équipe spécialisée effectué."
+  },
+  {
+    "input": "Le ticket nécessite une escalade",
+    "output": "Le ticket a été remonté hiérarchiquement."
+  },
+  {
+    "input": "Transférer vers le management",
+    "output": "Transfert vers l'équipe spécialisée effectué."
+  },
+  {
+    "input": "Demander une escalade hiérarchique",
+    "output": "Transfert vers l'équipe spécialisée effectué."
+  },
+  {
+    "input": "Le problème doit être escaladé",
+    "output": "Transfert vers l'équipe spécialisée effectué."
+  },
+  {
+    "input": "Passer au niveau 2 de support",
+    "output": "Escalade du ticket en cours vers le niveau supérieur."
+  },
+  {
+    "input": "Escalader vers l'équipe senior",
+    "output": "Le ticket a été remonté hiérarchiquement."
+  },
+  {
+    "input": "Besoin d'une intervention niveau 3",
+    "output": "Escalade du ticket en cours vers le niveau supérieur."
+  },
+  {
+    "input": "Remonter au responsable technique",
+    "output": "Escalade du ticket en cours vers le niveau supérieur."
+  },
+  {
+    "input": "Escalade nécessaire pour ce problème",
+    "output": "Le ticket a été remonté hiérarchiquement."
+  },
+  {
+    "input": "Transférer à l'expert senior",
+    "output": "Transfert vers l'équipe spécialisée effectué."
+  },
+  {
+    "input": "Demander une review par un expert",
+    "output": "Escalade programmée selon la procédure."
+  },
+  {
+    "input": "Bonjour",
+    "output": "Salut ! Que puis-je faire pour vous ?"
+  },
+  {
+    "input": "Salut",
+    "output": "Bonjour ! Je suis là pour vous assister avec vos tickets Jira."
+  },
+  {
+    "input": "Hello",
+    "output": "Bonjour, comment puis-je vous aider aujourd'hui ?"
+  },
+  {
+    "input": "Bonsoir",
+    "output": "Bonjour ! Prêt à gérer vos demandes de support."
+  },
+  {
+    "input": "Coucou",
+    "output": "Hello ! Comment puis-je vous aider avec vos tickets ?"
+  },
+  {
+    "input": "Salut, ça va ?",
+    "output": "Hello ! Comment puis-je vous aider avec vos tickets ?"
+  },
+  {
+    "input": "Bonjour, comment ça va ?",
+    "output": "Bonjour, comment puis-je vous aider aujourd'hui ?"
+  },
+  {
+    "input": "Bonne matinée",
+    "output": "Salut ! En quoi puis-je vous être utile ?"
+  },
+  {
+    "input": "Bonne après-midi",
+    "output": "Bonjour ! Je suis là pour vous assister avec vos tickets Jira."
+  },
+  {
+    "input": "Hey",
+    "output": "Salut ! En quoi puis-je vous être utile ?"
+  },
+  {
+    "input": "Hi",
+    "output": "Bonjour ! Prêt à gérer vos demandes de support."
+  },
+  {
+    "input": "Salut le bot",
+    "output": "Salut ! En quoi puis-je vous être utile ?"
+  },
+  {
+    "input": "Bonjour assistant",
+    "output": "Bonjour, comment puis-je vous aider aujourd'hui ?"
+  },
+  {
+    "input": "Yo !",
+    "output": "Hello ! Comment puis-je vous aider avec vos tickets ?"
+  },
+  {
+    "input": "Bonjour l'équipe technique",
+    "output": "Salut ! Que puis-je faire pour vous ?"
+  },
+  {
+    "input": "Salutations",
+    "output": "Bonjour ! Je suis là pour vous assister avec vos tickets Jira."
+  },
+  {
+    "input": "Bonjour à tous",
+    "output": "Hello ! Comment puis-je vous aider avec vos tickets ?"
+  },
+  {
+    "input": "Hello le support",
+    "output": "Hello ! Comment puis-je vous aider avec vos tickets ?"
+  },
+  {
+    "input": "Au revoir",
+    "output": "Bonne continuation, à bientôt !"
+  },
+  {
+    "input": "À bientôt",
+    "output": "Au revoir, je reste disponible pour vos futures demandes."
+  },
+  {
+    "input": "Bonne journée",
+    "output": "À plus tard ! N'hésitez pas à revenir."
+  },
+  {
+    "input": "Bye",
+    "output": "Au revoir, je reste disponible pour vos futures demandes."
+  },
+  {
+    "input": "Merci et au revoir",
+    "output": "À plus tard ! N'hésitez pas à revenir."
+  },
+  {
+    "input": "À plus tard",
+    "output": "Bonne journée, à bientôt."
+  },
+  {
+    "input": "Salut",
+    "output": "Bonne journée, à bientôt."
+  },
+  {
+    "input": "À plus",
+    "output": "Au revoir, et merci d'avoir utilisé le service."
+  },
+  {
+    "input": "Bonne soirée",
+    "output": "Bonne continuation, à bientôt !"
+  },
+  {
+    "input": "Bonne nuit",
+    "output": "À plus tard ! N'hésitez pas à revenir."
+  },
+  {
+    "input": "See you",
+    "output": "Au revoir, je reste disponible pour vos futures demandes."
+  },
+  {
+    "input": "Ciao",
+    "output": "À plus tard ! N'hésitez pas à revenir."
+  },
+  {
+    "input": "À demain",
+    "output": "Au revoir, et merci d'avoir utilisé le service."
+  },
+  {
+    "input": "Fin de notre conversation",
+    "output": "Bonne journée, à bientôt."
+  },
+  {
+    "input": "Je me déconnecte",
+    "output": "Au revoir, je reste disponible pour vos futures demandes."
+  },
+  {
+    "input": "Merci",
+    "output": "À votre service !"
+  },
+  {
+    "input": "C'est gentil",
+    "output": "Content d'avoir pu vous aider !"
+  },
+  {
+    "input": "Merci beaucoup",
+    "output": "Heureux d'avoir été utile."
+  },
+  {
+    "input": "Je te remercie",
+    "output": "Avec plaisir."
+  },
+  {
+    "input": "Merci bien",
+    "output": "Heureux d'avoir été utile."
+  },
+  {
+    "input": "Super, merci",
+    "output": "Avec plaisir."
+  },
+  {
+    "input": "Parfait, merci",
+    "output": "À votre service !"
+  },
+  {
+    "input": "Génial, merci",
+    "output": "Heureux d'avoir été utile."
+  },
+  {
+    "input": "Excellent, merci",
+    "output": "Heureux d'avoir été utile."
+  },
+  {
+    "input": "Top, merci",
+    "output": "De rien, c'est mon rôle."
+  },
+  {
+    "input": "Merci infiniment",
+    "output": "Je suis là pour vous aider."
+  },
+  {
+    "input": "Très reconnaissant",
+    "output": "Merci à vous."
+  },
+  {
+    "input": "Je vous remercie",
+    "output": "Content d'avoir pu vous aider !"
+  },
+  {
+    "input": "Apprécié",
+    "output": "Je suis là pour vous aider."
+  },
+  {
+    "input": "Aide-moi",
+    "output": "Je gère vos demandes de support : création, modification, suivi et fermeture de tickets."
+  },
+  {
+    "input": "Comment ça marche ?",
+    "output": "Voici ce que vous pouvez demander : créer un ticket, voir l'état d'un ticket, lister les tickets, etc."
+  },
+  {
+    "input": "Quelles sont les commandes possibles ?",
+    "output": "Voici ce que vous pouvez demander : créer un ticket, voir l'état d'un ticket, lister les tickets, etc."
+  },
+  {
+    "input": "Que puis-je faire avec ce bot ?",
+    "output": "Guide rapide : dites-moi ce que vous voulez faire avec vos tickets et je m'en occupe !"
+  },
+  {
+    "input": "Je veux de l'aide",
+    "output": "Voici ce que vous pouvez demander : créer un ticket, voir l'état d'un ticket, lister les tickets, etc."
+  },
+  {
+    "input": "Explique-moi comment utiliser ce service",
+    "output": "Je gère vos demandes de support : création, modification, suivi et fermeture de tickets."
+  },
+  {
+    "input": "Mode d'emploi",
+    "output": "Voici ce que vous pouvez demander : créer un ticket, voir l'état d'un ticket, lister les tickets, etc."
+  },
+  {
+    "input": "Documentation",
+    "output": "Guide rapide : dites-moi ce que vous voulez faire avec vos tickets et je m'en occupe !"
+  },
+  {
+    "input": "Guide d'utilisation",
+    "output": "Guide rapide : dites-moi ce que vous voulez faire avec vos tickets et je m'en occupe !"
+  },
+  {
+    "input": "Liste des fonctionnalités",
+    "output": "Vous pouvez créer, suivre, mettre à jour et fermer des tickets Jira via ce chatbot."
+  },
+  {
+    "input": "Que sais-tu faire ?",
+    "output": "Fonctionnalités disponibles : gestion complète des tickets Jira, recherche, statistiques et escalades."
+  },
+  {
+    "input": "Aide sur les commandes",
+    "output": "Voici ce que vous pouvez demander : créer un ticket, voir l'état d'un ticket, lister les tickets, etc."
+  },
+  {
+    "input": "Tutorial",
+    "output": "Guide rapide : dites-moi ce que vous voulez faire avec vos tickets et je m'en occupe !"
+  },
+  {
+    "input": "Comment utiliser ce chatbot ?",
+    "output": "Je peux vous aider avec : création de tickets, suivi de statut, mise à jour, fermeture, assignation et recherche de tickets."
+  },
+  {
+    "input": "Besoin d'assistance",
+    "output": "Guide rapide : dites-moi ce que vous voulez faire avec vos tickets et je m'en occupe !"
+  },
+  {
+    "input": "Quelles options sont disponibles ?",
+    "output": "Vous pouvez créer, suivre, mettre à jour et fermer des tickets Jira via ce chatbot."
+  },
+  {
+    "input": "Montre-moi les possibilités",
+    "output": "Vous pouvez créer, suivre, mettre à jour et fermer des tickets Jira via ce chatbot."
+  },
+  {
+    "input": "État du système Jira",
+    "output": "Contrôle de l'état général du système."
+  },
+  {
+    "input": "Jira fonctionne-t-il ?",
+    "output": "Consultation du statut des services en cours..."
+  },
+  {
+    "input": "Y a-t-il des pannes en cours ?",
+    "output": "Vérification de la disponibilité de Jira."
+  },
+  {
+    "input": "Statut des services",
+    "output": "Consultation du statut des services en cours..."
+  },
+  {
+    "input": "Problème système général ?",
+    "output": "Je vérifie l'état des systèmes pour vous."
+  },
+  {
+    "input": "Maintenance en cours ?",
+    "output": "Consultation du statut des services en cours..."
+  },
+  {
+    "input": "Service disponible ?",
+    "output": "Vérification de la disponibilité de Jira."
+  },
+  {
+    "input": "Statut de la plateforme",
+    "output": "Vérification de la disponibilité de Jira."
+  },
+  {
+    "input": "Tout fonctionne normalement ?",
+    "output": "Vérification de la disponibilité de Jira."
+  },
+  {
+    "input": "Vérifier santé du système",
+    "output": "Consultation du statut des services en cours..."
+  },
+  {
+    "input": "Incidents en cours ?",
+    "output": "Contrôle de l'état général du système."
+  },
+  {
+    "input": "Ça ne marche pas !",
+    "output": "Je comprends votre frustration. Laissez-moi vous aider rapidement."
+  },
+  {
+    "input": "C'est toujours en panne",
+    "output": "Je comprends votre frustration. Laissez-moi vous aider rapidement."
+  },
+  {
+    "input": "J'en ai marre de ces bugs",
+    "output": "Je vois que c'est urgent pour vous. Que puis-je faire immédiatement ?"
+  },
+  {
+    "input": "Pourquoi c'est si lent ?",
+    "output": "Je comprends votre frustration. Laissez-moi vous aider rapidement."
+  },
+  {
+    "input": "Ça fait des heures que j'attends",
+    "output": "Désolé pour ces désagréments. Comment puis-je vous assister au mieux ?"
+  },
+  {
+    "input": "C'est inadmissible",
+    "output": "Je vois que c'est urgent pour vous. Que puis-je faire immédiatement ?"
+  },
+  {
+    "input": "Je suis énervé",
+    "output": "Je prends note de votre situation. Quel est le problème exact ?"
+  },
+  {
+    "input": "Ça bug encore",
+    "output": "Je vois que c'est urgent pour vous. Que puis-je faire immédiatement ?"
+  },
+  {
+    "input": "Quand est-ce que ça va marcher ?",
+    "output": "Votre agacement est compréhensible. Créons un ticket prioritaire."
+  },
+  {
+    "input": "J'ai perdu ma journée à cause de ça",
+    "output": "Je prends note de votre situation. Quel est le problème exact ?"
+  },
+  {
+    "input": "C'est la 3ème fois ce mois-ci !",
+    "output": "Désolé pour ces désagréments. Comment puis-je vous assister au mieux ?"
+  },
+  {
+    "input": "Incompétence totale du support",
+    "output": "Votre agacement est compréhensible. Créons un ticket prioritaire."
+  },
+  {
+    "input": "J'exige une solution immédiate",
+    "output": "Désolé pour ces désagréments. Comment puis-je vous assister au mieux ?"
+  },
+  {
+    "input": "Insupportable cette situation",
+    "output": "Désolé pour ces désagréments. Comment puis-je vous assister au mieux ?"
+  },
+  {
+    "input": "Service déplorable",
+    "output": "Votre agacement est compréhensible. Créons un ticket prioritaire."
+  },
+  {
+    "input": "Je vais porter plainte",
+    "output": "Je vois que c'est urgent pour vous. Que puis-je faire immédiatement ?"
+  },
+  {
+    "input": "Toujours pas résolu ?",
+    "output": "Votre agacement est compréhensible. Créons un ticket prioritaire."
+  },
+  {
+    "input": "C'est une honte",
+    "output": "Je comprends votre frustration. Laissez-moi vous aider rapidement."
+  },
+  {
+    "input": "Inacceptable comme délai",
+    "output": "Je vois que c'est urgent pour vous. Que puis-je faire immédiatement ?"
+  },
+  {
+    "input": "Tu es super",
+    "output": "Votre retour me fait plaisir, merci !"
+  },
+  {
+    "input": "Excellent travail",
+    "output": "Merci beaucoup, c'est très gentil !"
+  },
+  {
+    "input": "Parfait",
+    "output": "Merci, je fais de mon mieux pour vous aider."
+  },
+  {
+    "input": "Tu m'as bien aidé",
+    "output": "Ravi que le service vous convienne !"
+  },
+  {
+    "input": "Service impeccable",
+    "output": "Merci, je fais de mon mieux pour vous aider."
+  },
+  {
+    "input": "Très efficace",
+    "output": "Content d'avoir pu vous satisfaire !"
+  },
+  {
+    "input": "Bravo",
+    "output": "Ravi que le service vous convienne !"
+  },
+  {
+    "input": "Top niveau",
+    "output": "Content d'avoir pu vous satisfaire !"
+  },
+  {
+    "input": "Ça c'est du service",
+    "output": "Ravi que le service vous convienne !"
+  },
+  {
+    "input": "T'es un boss !",
+    "output": "Votre retour me fait plaisir, merci !"
+  },
+  {
+    "input": "Service au top merci",
+    "output": "Content d'avoir pu vous satisfaire !"
+  },
+  {
+    "input": "Professionnel",
+    "output": "Ravi que le service vous convienne !"
+  },
+  {
+    "input": "Réactivité exceptionnelle",
+    "output": "Merci, je fais de mon mieux pour vous aider."
+  },
+  {
+    "input": "Très satisfait",
+    "output": "Votre retour me fait plaisir, merci !"
+  },
+  {
+    "input": "Au-delà de mes attentes",
+    "output": "Content d'avoir pu vous satisfaire !"
+  },
+  {
+    "input": "Je recommande",
+    "output": "Votre retour me fait plaisir, merci !"
+  }
+]

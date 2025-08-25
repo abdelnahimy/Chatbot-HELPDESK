@@ -1,0 +1,21 @@
+[
+  "greet",
+  "goodbye",
+  "thanks",
+  "help",
+  "login_problem",
+  "password_reset",
+  "software_issue",
+  "hardware_problem",
+  "network_issue",
+  "email_problem",
+  "printer_issue",
+  "system_status",
+  "compliment",
+  "frustrated_user",
+  "account_locked",
+  "vpn_issue",
+  "file_access",
+  "installation_help",
+  "get_ticket_status"
+]

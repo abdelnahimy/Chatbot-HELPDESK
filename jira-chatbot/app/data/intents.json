@@ -1,0 +1,98 @@
+{
+  "intents": [
+    {
+      "tag": "greet",
+      "patterns": [
+        "Bonjour",
+        "Salut",
+        "Hello",
+        "Bonsoir",
+        "Coucou",
+        "Hey",
+        "Hi"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Au revoir",
+        "Bye",
+        "À bientôt",
+        "Salut",
+        "Ciao",
+        "Goodbye"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Merci",
+        "Merci beaucoup",
+        "Thanks",
+        "Je vous remercie",
+        "Thank you"
+      ]
+    },
+    {
+      "tag": "get_ticket_status",
+      "patterns": [
+        "statut de mon ticket",
+        "status du ticket",
+        "où en est mon ticket",
+        "ticket status",
+        "vérifier ticket",
+        "état du ticket",
+        "suivi de ticket",
+        "avancement ticket",
+        "status SUP-",
+        "statut SUP-"
+      ]
+    },
+    {
+      "tag": "login_problem",
+      "patterns": [
+        "Je n'arrive pas à me connecter",
+        "Problème de connexion",
+        "Login ne marche pas",
+        "Impossible de me connecter",
+        "Erreur de connexion"
+      ]
+    },
+    {
+      "tag": "password_reset",
+      "patterns": [
+        "Mot de passe oublié",
+        "Reset password",
+        "Changer mot de passe",
+        "J'ai oublié mon mot de passe",
+        "Réinitialiser mot de passe"
+      ]
+    },
+    {
+      "tag": "email_problem",
+      "patterns": [
+        "Problème email",
+        "Email ne marche pas",
+        "Impossible d'envoyer email",
+        "Outlook ne fonctionne pas"
+      ]
+    },
+    {
+      "tag": "printer_issue",
+      "patterns": [
+        "Problème imprimante",
+        "Imprimante ne marche pas",
+        "Impossible d'imprimer"
+      ]
+    },
+    {
+      "tag": "network_issue",
+      "patterns": [
+        "Problème réseau",
+        "Pas d'internet",
+        "WiFi ne marche pas",
+        "Connexion lente"
+      ]
+    }
+  ]
+}
