@@ -62,6 +62,10 @@ class APIService {
   static async healthCheck() {
     return this.get('/health');
   }
+
+  static async getTickets(maxResults = 50) {
+  return this.get(`/tickets?max_results=${maxResults}`);
+}
 }
 
 // Mock data fallback (in case API is not available)
@@ -186,6 +190,8 @@ const App = () => {
   const [tickets, setTickets] = useState(mockTickets);
   const [isLoading, setIsLoading] = useState(false);
   const [apiAvailable, setApiAvailable] = useState(false);
+  const [selectedTicket, setSelectedTicket] = useState(null);
+  const [showTicketModal, setShowTicketModal] = useState(false);
   const [conversationContext, setConversationContext] = useState({
     active: false,
     type: null,
@@ -204,6 +210,37 @@ const App = () => {
   useEffect(() => {
     checkApiAvailability();
   }, []);
+
+  useEffect(() => {
+    const loadTicketsFromJira = async () => {
+      if (apiAvailable) {
+        try {
+          console.log('🔄 Chargement des tickets depuis Jira...');
+          const response = await APIService.getTickets(50);
+          
+          if (response.tickets && response.tickets.length > 0) {
+            const formattedTickets = response.tickets.map(ticket => ({
+              id: ticket.ticket_key,
+              title: ticket.title,
+              status: ticket.status,
+              createdAt: ticket.created_at.split('T')[0],
+              description: ticket.description
+            }));
+            
+            setTickets(formattedTickets);
+            console.log(`✅ ${formattedTickets.length} tickets chargés depuis Jira`);
+          } else {
+            console.log('⚠️ Aucun ticket trouvé dans Jira');
+          }
+        } catch (error) {
+          console.error('❌ Erreur lors du chargement des tickets:', error);
+          console.log('⚠️ Utilisation des tickets mockés');
+        }
+      }
+    };
+    
+    loadTicketsFromJira();
+  }, [apiAvailable]);
 
   useEffect(() => {
     if (currentPage === 'chat') {
@@ -349,14 +386,7 @@ const App = () => {
     }
   }, [handleSendMessage]);
 
-  // Auto-resize the input as the user types
-  useEffect(() => {
-    const el = inputRef.current;
-    if (!el) return;
-    el.style.height = 'auto';
-    const maxHeight = 160; // cap height ~8 lines
-    el.style.height = Math.min(el.scrollHeight, maxHeight) + 'px';
-  }, [inputMessage]);
+  // No auto-resize needed for input element
 
   const handleCreateTicket = async () => {
     if (!conversationContext.originalMessage) return;
@@ -448,23 +478,23 @@ const App = () => {
   };
 
   const HomePage = () => (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-primary-50">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-600 rounded-full mb-6">
               <MessageCircle className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Assistant Support <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">OCP</span>
+            Assistant Support <span className="text-primary-600">OCP</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Votre assistant intelligent pour résoudre tous vos problèmes techniques rapidement et efficacement
           </p>
           <button 
             onClick={() => setCurrentPage('chat')}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Démarrer une conversation
           </button>
@@ -472,7 +502,7 @@ const App = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-6">
               <MessageCircle className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Chat Intelligent</h3>
@@ -482,7 +512,7 @@ const App = () => {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-6">
               <Ticket className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Gestion de Tickets</h3>
@@ -492,7 +522,7 @@ const App = () => {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-6">
               <CheckCircle className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Support 24/7</h3>
@@ -506,8 +536,8 @@ const App = () => {
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Types de problèmes supportés</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-blue-600 font-semibold">🔐</span>
+              <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-accent-orange font-semibold">🔐</span>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">Authentification</h4>
@@ -515,8 +545,8 @@ const App = () => {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-green-600 font-semibold">📧</span>
+              <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-accent-blue font-semibold">📧</span>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">Messagerie</h4>
@@ -525,7 +555,7 @@ const App = () => {
             </div>
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-purple-600 font-semibold">🖨️</span>
+                <span className="text-accent-purple font-semibold">🖨️</span>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">Impression</h4>
@@ -533,8 +563,8 @@ const App = () => {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-orange-600 font-semibold">🌐</span>
+              <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-accent-blue font-semibold">🌐</span>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">Réseau</h4>
@@ -552,7 +582,7 @@ const App = () => {
       <div className="bg-white/80 backdrop-blur shadow-sm border-b p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
               <Bot className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -572,7 +602,7 @@ const App = () => {
         <div className="h-[calc(100vh-12rem)] overflow-y-auto space-y-4 pr-1">
         {messages.length === 0 && (
           <div className="text-center py-12">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <MessageCircle className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Bienvenue dans le chat support</h3>
@@ -584,21 +614,21 @@ const App = () => {
           <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[85%] md:max-w-[80%] lg:max-w-[75%] ${
               message.sender === 'user' 
-                ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white' 
+                ? 'bg-primary-600 text-white' 
                 : 'bg-white text-gray-900 shadow-sm border'
             } rounded-2xl px-4 py-3`}>
               <div className="flex items-start space-x-2">
                 {message.sender === 'bot' && (
-                  <Bot className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <Bot className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
                 )}
                 <div className="flex-1">
-                  <p className="whitespace-pre-line" dir="ltr" style={{direction: 'ltr', unicodeBidi: 'bidi-override', textAlign: 'left'}}>{message.text}</p>
-                  <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-blue-100' : 'text-gray-500'}`}>
+                  <p className="whitespace-pre-line">{message.text}</p>
+                  <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-primary-100' : 'text-gray-500'}`}>
                     {message.timestamp.toLocaleTimeString()}
                   </p>
                 </div>
                 {message.sender === 'user' && (
-                  <User className="w-5 h-5 text-blue-100 flex-shrink-0 mt-0.5" />
+                  <User className="w-5 h-5 text-primary-100 flex-shrink-0 mt-0.5" />
                 )}
               </div>
               
@@ -609,7 +639,7 @@ const App = () => {
                     <button 
                       onClick={handleCreateTicket}
                       disabled={isLoading}
-                      className="w-full bg-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-blue-700 disabled:opacity-50 transition-colors"
+                      className="w-full bg-primary-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-primary-700 disabled:opacity-50 transition-colors"
                     >
                       {isLoading ? "Création..." : "Créer un ticket"}
                     </button>
@@ -630,7 +660,7 @@ const App = () => {
           <div className="flex justify-start">
             <div className="bg-white rounded-2xl px-4 py-3 shadow-sm border">
               <div className="flex items-center space-x-2">
-                <Bot className="w-5 h-5 text-blue-600" />
+                <Bot className="w-5 h-5 text-primary-600" />
                 <div className="flex space-x-1">
                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
@@ -647,18 +677,16 @@ const App = () => {
       <div className="sticky bottom-0 bg-white/90 backdrop-blur border-t">
         <div className="container mx-auto max-w-3xl xl:max-w-4xl px-4 py-4">
           <div className="flex items-end space-x-3">
-            <textarea
+            <input
               ref={inputRef}
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyDown={handleKeyPress}
-              placeholder="Décrivez votre problème... (Entrée pour envoyer, Shift+Entrée pour nouvelle ligne)"
-              rows={1}
-              className="flex-1 border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-white shadow-sm"
+              placeholder="Décrivez votre problème... (Entrée pour envoyer)"
+              className="flex-1 border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white shadow-sm chat-input"
               autoFocus
               onBlur={() => setTimeout(() => inputRef.current?.focus(), 0)}
-              dir="ltr"
-              inputMode="text"
+              type="text"
               autoComplete="off"
               autoCorrect="off"
               spellCheck={false}
@@ -666,7 +694,7 @@ const App = () => {
             <button
               onClick={handleSendMessage}
               disabled={isLoading || !inputMessage.trim()}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-2 rounded-xl hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm"
+              className="bg-primary-600 text-white p-2 rounded-xl hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm"
               onMouseDown={(e) => e.preventDefault()}
             >
               {isLoading ? <Loader className="w-5 h-5 animate-spin" /> : <Send className="w-5 h-5" />}
@@ -677,69 +705,249 @@ const App = () => {
     </div>
   );
 
-  const TicketsPage = () => (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="container mx-auto px-4">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Mes Tickets</h1>
-          <p className="text-gray-600">Gérez et suivez tous vos tickets de support</p>
-        </div>
+// ✅ MODAL SANS BOUTONS D'ACTIONS
+  const TicketDetailsModal = ({ ticket, onClose }) => {
+    if (!ticket) return null;
 
-        <div className="grid gap-4 md:gap-6">
-          {tickets.map((ticket) => (
-            <div key={ticket.id} className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-all duration-200">
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <div className="flex items-center space-x-3 mb-2">
-                      <h3 className="text-lg font-semibold text-gray-900">#{ticket.id}</h3>
-                      <StatusBadge status={ticket.status} />
-                    </div>
-                    <h4 className="text-xl font-medium text-gray-800 mb-2">{ticket.title}</h4>
-                    <p className="text-gray-600">{ticket.description}</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
-                    Créé le {new Date(ticket.createdAt).toLocaleDateString('fr-FR')}
-                  </div>
-                  <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
-                    Voir détails
-                  </button>
-                </div>
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
+          {/* Header */}
+          <div className="bg-primary-600 text-white p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-bold">Détails du Ticket</h2>
+              <button
+                onClick={onClose}
+                className="text-white hover:bg-white/20 rounded-lg p-2 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="flex items-center space-x-3">
+              <span className="text-lg font-semibold">#{ticket.id}</span>
+              <StatusBadge status={ticket.status} />
+            </div>
+          </div>
+
+          {/* Body */}
+          <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
+            {/* Titre */}
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-500 mb-2">Titre</label>
+              <h3 className="text-xl font-semibold text-gray-900">{ticket.title}</h3>
+            </div>
+
+            {/* Description */}
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-500 mb-2">Description</label>
+              <div className="bg-gray-50 rounded-lg p-4 text-gray-700">
+                {ticket.description}
               </div>
             </div>
-          ))}
-        </div>
 
-        {tickets.length === 0 && (
-          <div className="text-center py-12">
-            <Ticket className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Aucun ticket trouvé</h3>
-            <p className="text-gray-600 mb-4">Vous n'avez pas encore créé de tickets</p>
-            <button 
-              onClick={() => setCurrentPage('chat')}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            {/* Informations */}
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-500 mb-1">Statut</label>
+                <StatusBadge status={ticket.status} />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-500 mb-1">Date de création</label>
+                <div className="flex items-center text-gray-700">
+                  <Clock className="w-4 h-4 mr-2" />
+                  {new Date(ticket.createdAt).toLocaleDateString('fr-FR', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                  })}
+                </div>
+              </div>
+
+              {ticket.priority && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Priorité</label>
+                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+                    ticket.priority === 'High' ? 'bg-red-100 text-red-800' :
+                    ticket.priority === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
+                    'bg-green-100 text-green-800'
+                  }`}>
+                    {ticket.priority}
+                  </span>
+                </div>
+              )}
+
+              {ticket.issuetype && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-500 mb-1">Type</label>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                    {ticket.issuetype}
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="bg-gray-50 px-6 py-4 flex justify-end">
+            <button
+              onClick={onClose}
+              className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium"
             >
-              Démarrer une conversation
+              Fermer
             </button>
           </div>
-        )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
+
+  const TicketsPage = () => {
+    // ✅ AJOUTER CETTE FONCTION
+     const handleViewDetails = (ticket) => {
+      setSelectedTicket(ticket);
+      setShowTicketModal(true);
+    };
+
+    // ✅ AJOUTER CETTE FONCTION (OPTIONNEL: pour refresh)
+    const refreshTickets = async () => {
+      if (apiAvailable) {
+        try {
+          setIsLoading(true);
+          const response = await APIService.getTickets(50);
+          
+          if (response.tickets && response.tickets.length > 0) {
+            const formattedTickets = response.tickets.map(ticket => ({
+              id: ticket.ticket_key,
+              title: ticket.title,
+              status: ticket.status,
+              createdAt: ticket.created_at.split('T')[0],
+              description: ticket.description,
+              priority: ticket.priority,
+              issuetype: ticket.issuetype
+            }));
+            
+            setTickets(formattedTickets);
+          }
+        } catch (error) {
+          console.error('Erreur refresh:', error);
+        } finally {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    return (
+      <>
+        {/* ✅ AJOUTER LE MODAL */}
+        {showTicketModal && (
+          <TicketDetailsModal
+            ticket={selectedTicket}
+            onClose={() => {
+              setShowTicketModal(false);
+              setSelectedTicket(null);
+            }}
+          />
+        )}
+
+        <div className="min-h-screen bg-gray-50 py-8">
+          <div className="container mx-auto px-4">
+            {/* ✅ MODIFIER LE HEADER POUR AJOUTER LE BOUTON REFRESH */}
+            <div className="mb-8 flex items-center justify-between">
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">Mes Tickets</h1>
+                <p className="text-gray-600">Gérez et suivez tous vos tickets de support</p>
+              </div>
+              
+              {apiAvailable && (
+                <button
+                  onClick={refreshTickets}
+                  disabled={isLoading}
+                  className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2"
+                >
+                  {isLoading ? (
+                    <>
+                      <Loader className="w-4 h-4 animate-spin" />
+                      <span>Chargement...</span>
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                      <span>Actualiser</span>
+                    </>
+                  )}
+                </button>
+              )}
+            </div>
+
+            <div className="grid gap-4 md:gap-6">
+              {tickets.map((ticket) => (
+                <div key={ticket.id} className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-all duration-200">
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <div className="flex items-center space-x-3 mb-2">
+                          <h3 className="text-lg font-semibold text-gray-900">#{ticket.id}</h3>
+                          <StatusBadge status={ticket.status} />
+                        </div>
+                        <h4 className="text-xl font-medium text-gray-800 mb-2">{ticket.title}</h4>
+                        <p className="text-gray-600">{ticket.description}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Clock className="w-4 h-4 mr-1" />
+                        Créé le {new Date(ticket.createdAt).toLocaleDateString('fr-FR')}
+                      </div>
+                      {/* ✅ MODIFIER CE BOUTON */}
+                      <button
+                        onClick={() => handleViewDetails(ticket)}
+                        className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center space-x-1"
+                      >
+                        <span>Voir détails</span>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {tickets.length === 0 && (
+              <div className="text-center py-12">
+                <Ticket className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Aucun ticket trouvé</h3>
+                <p className="text-gray-600 mb-4">Vous n'avez pas encore créé de tickets</p>
+                <button 
+                  onClick={() => setCurrentPage('chat')}
+                  className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+                >
+                  Démarrer une conversation
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      </>
+    );
+  };
 
   const Navigation = () => (
     <nav className="bg-white shadow-sm border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
               <MessageCircle className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">OCP Support</span>
+            <span className="text-xl font-bold text-gray-900">Chatbot HELPDESK</span>
           </div>
           
           <div className="flex space-x-1">
@@ -747,7 +955,7 @@ const App = () => {
               onClick={() => setCurrentPage('home')}
               className={`px-4 py-2 rounded-lg transition-colors ${
                 currentPage === 'home' 
-                  ? 'bg-blue-100 text-blue-700' 
+                  ? 'bg-primary-100 text-primary-700' 
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
               }`}
             >
@@ -758,7 +966,7 @@ const App = () => {
               onClick={() => setCurrentPage('chat')}
               className={`px-4 py-2 rounded-lg transition-colors ${
                 currentPage === 'chat' 
-                  ? 'bg-blue-100 text-blue-700' 
+                  ? 'bg-primary-100 text-primary-700' 
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
               }`}
             >
@@ -769,14 +977,14 @@ const App = () => {
               onClick={() => setCurrentPage('tickets')}
               className={`px-4 py-2 rounded-lg transition-colors ${
                 currentPage === 'tickets' 
-                  ? 'bg-blue-100 text-blue-700' 
+                  ? 'bg-primary-100 text-primary-700' 
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
               }`}
             >
               <Ticket className="w-4 h-4 inline mr-2" />
               Mes Tickets
               {tickets.length > 0 && (
-                <span className="ml-1 bg-blue-600 text-white text-xs px-1.5 py-0.5 rounded-full">
+                <span className="ml-1 bg-primary-600 text-white text-xs px-1.5 py-0.5 rounded-full">
                   {tickets.length}
                 </span>
               )}
@@ -788,7 +996,7 @@ const App = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-primary-50">
       <Navigation />
       {currentPage === 'home' && <HomePage />}
       {currentPage === 'chat' && <ChatPage />}

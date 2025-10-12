@@ -12,7 +12,7 @@ from datetime import datetime
 
 # Import your existing chatbot logic
 try:
-    from jira_service import create_ticket as jira_create_ticket, get_ticket_status
+    from jira_service import create_ticket as jira_create_ticket, get_ticket_status, list_all_tickets
     JIRA_AVAILABLE = True
     print("✅ Service JIRA importé avec succès")
 except ImportError as e:
@@ -608,6 +608,37 @@ async def get_ticket_status_endpoint(ticket_key: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error checking ticket status: {str(e)}")
 
+@app.get("/tickets")
+async def list_tickets_endpoint(max_results: int = 50):
+    """Liste tous les tickets du projet"""
+    try:
+        if JIRA_AVAILABLE:
+            try:
+                tickets = list_all_tickets(max_results)
+                return {
+                    "tickets": tickets,
+                    "count": len(tickets),
+                    "source": "jira",
+                    "timestamp": datetime.now().isoformat()
+                }
+            except Exception as e:
+                print(f"❌ Erreur JIRA lors du listing: {e}")
+                return {
+                    "tickets": [],
+                    "count": 0,
+                    "source": "fallback",
+                    "error": str(e)
+                }
+        else:
+            return {
+                "tickets": [],
+                "count": 0,
+                "source": "fallback",
+                "message": "JIRA service not available"
+            }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error listing tickets: {str(e)}")
+    
 if __name__ == "__main__":
     print("🚀 Démarrage de l'API Chatbot OCP...")
     print(f"📋 JIRA disponible: {JIRA_AVAILABLE}")
